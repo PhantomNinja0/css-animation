@@ -1,0 +1,48 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+@keyframes example {
+        from {background-color: red;}
+        0%{
+            width: 100px;
+        }
+        50%{
+            width: 100%;
+            background-color: hotpink;
+        }
+        100%{
+            width: 100px;
+            background-color: blueviolet;
+        }
+        to {background-color: red;}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    50%{
+        transform: rotate(360deg);
+        filter: hue-rotate(180deg);
+    }
+    to {transform: rotate(0deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+div {
+    width: 100px;
+    height: 100px;
+}
+div:hover {
+    text-align: center;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite
+}
+
+div:hover img{
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite
+}
